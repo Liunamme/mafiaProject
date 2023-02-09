@@ -6,72 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fontstruct.com/fontstructions/show/1531425/calculatrix-7" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div id="mafia">
   <div id="globalStructure">
     <div id="mafiaUpBlockGlobal">
-   <form name=MyForm id="secundomer">   
-    <div id="secNumbers">
-      <input name=stopwatch size=10 value="00:00.00" id="timerMafia">  
-    </div>
+<div id="sekundomer">
+  <div class="timerMafia">
+    <span id="minute">00</span>
+    <span class="dvoetochie">:</span>
+    <span id="second">00</span>
+    <span id="ms">00</span>
+  </div>
     <div id="secBtns">
-      <input type=button value="Запуск/Остановить" onclick="StartStop()" id="stopStartBtn" class="secBtn"> 
+      <!-- <button id="vpered" class="secBtns" onclick="vpered();">▶</button> -->
+      <a id="vpered" class="secBtns" target="_blank" onclick="vpered();"><img src="./img/timerBtns/play.png" alt="Start"></a>
+      <a id="sanovka" class="secBtns" target="_blank" onclick="sanovka();"><img src="./img/timerBtns/pause.png" alt="Pause"></a>
+      <a id="reset" class="secBtns" target="_blank" onclick="ClearСlock();"><img src="./img/timerBtns/reset.png" alt="Reset"></a>
     </div>
-</form>
+  </div>
     <div id="voteResultMafia">
       <h2>Выставлены</h2>
-      <div id="mafiaVoteUp">
-        <span id="resultVoteMafia"></span>
+      <div id="vRM">
+        <div id="mafiaVoteUp">
+          <span id="resultVoteMafia"></span>
+        </div>
       </div>
     </div>
     </div>
     <div id="globalStructurePanels">
       <div id="mafiaControlPanelGlobal">
         <div id="mafiaControlPanel">
+          <div id="controlPanel">
           <div id="btnPlayers">
-            <h2>Панель управления (выставления/фолы)</h2>
-            <button id="controlBtn09">9 игроков</button>
-            <button id="controlBtn10">10 игроков</button>
-            <button id="controlBtn11">11 игроков</button>
-            <button id="controlBtn12">12 игроков</button>
-            <button id="controlBtn13">13 игроков</button>
-            <button id="controlBtn14">14 игроков</button>
-            <button id="controlBtn15">15 игроков</button>
+            <h2>Панель управления</h2>
+            <button id="controlBtn09" class="controlBtn">9 игроков</button>
+            <button id="controlBtn10" class="controlBtn">10 игроков</button>
+            <button id="controlBtn11" class="controlBtn">11 игроков</button>
+            <button id="controlBtn12" class="controlBtn">12 игроков</button>
+            <button id="controlBtn13" class="controlBtn">13 игроков</button>
+            <button id="controlBtn14" class="controlBtn">14 игроков</button>
+            <button id="controlBtn15" class="controlBtn">15 игроков</button>
           </div>
           <div id="btnFalls">
           </div>
           <br>
           <div id="controlPanelResult">
           </div>
+          <div id="globalPanelControls">
+            
+          </div>
+        </div>
+          <div id="clearBtnVote">
+          </div>
         </div>
         <div id="mafiaCloseRandomGlobal">
-          <button id="mafiaBtnClose">Скрыть</button>
+          <button id="mafiaBtnClose">Рандомайзер</button>
+          <div id="mafiaInfo">
+            <textarea id="textAriaMafia"></textarea>
+          </div>
           <div id="mafiaCloseRandom">
-            <div id="mafiaRole">
-                <h2>Раздача ролей на мафию:</h2>
-                <button id="mafiaBtn09">9 игроков</button>
-                <button id="mafiaBtn10">10 игроков</button>
-                <button id="mafiaBtn11">11 игроков</button>
-                <button id="mafiaBtn12">12 игроков</button>
-                <button id="mafiaBtn13">13 игроков</button>
-                <button id="mafiaBtn14">14 игроков</button>
-                <button id="mafiaBtn15">15 игроков</button>
+            <div id="mafiaRole" class="offRole">
+                <h2>Раздача ролей на мафию</h2>
+                <button id="mafiaBtn09" class="mafiaBtn">9 игроков</button>
+                <button id="mafiaBtn10" class="mafiaBtn">10 игроков</button>
+                <button id="mafiaBtn11" class="mafiaBtn">11 игроков</button>
+                <button id="mafiaBtn12" class="mafiaBtn">12 игроков</button>
+                <button id="mafiaBtn13" class="mafiaBtn">13 игроков</button>
+                <button id="mafiaBtn14" class="mafiaBtn">14 игроков</button>
+                <button id="mafiaBtn15" class="mafiaBtn">15 игроков</button>
                 <br>
                 <div id="mafiaRoleResult">
                 </div>
           </div>
       
-            <div id="mafiaSlots">
-                <h2>Рандом слотов на мафию:</h2>
-                <button id="slotBtn09">9 игроков</button>
-                <button id="slotBtn10">10 игроков</button>
-                <button id="slotBtn11">11 игроков</button>
-                <button id="slotBtn12">12 игроков</button>
-                <button id="slotBtn13">13 игроков</button>
-                <button id="slotBtn14">14 игроков</button>
-                <button id="slotBtn15">15 игроков</button>
+            <div id="mafiaSlots" class="offRole">
+                <h2>Рандом слотов на мафию</h2>
+                <button id="slotBtn09" class="slotBtn">9 игроков</button>
+                <button id="slotBtn10" class="slotBtn">10 игроков</button>
+                <button id="slotBtn11" class="slotBtn">11 игроков</button>
+                <button id="slotBtn12" class="slotBtn">12 игроков</button>
+                <button id="slotBtn13" class="slotBtn">13 игроков</button>
+                <button id="slotBtn14" class="slotBtn">14 игроков</button>
+                <button id="slotBtn15" class="slotBtn">15 игроков</button>
                 <br>
                 <div id="slotRoleResult">
                 </div>
