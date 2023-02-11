@@ -5,11 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <title>Discord Mafia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fontstruct.com/fontstructions/show/1531425/calculatrix-7" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -41,38 +40,43 @@
     </div>
     <div id="globalStructurePanels">
       <div id="mafiaControlPanelGlobal">
-        <div id="mafiaControlPanel">
-          <div id="controlPanel">
-          <div id="btnPlayers">
-            <h2>Панель управления</h2>
-            <button id="controlBtn09" class="controlBtn">9 игроков</button>
-            <button id="controlBtn10" class="controlBtn">10 игроков</button>
-            <button id="controlBtn11" class="controlBtn">11 игроков</button>
-            <button id="controlBtn12" class="controlBtn">12 игроков</button>
-            <button id="controlBtn13" class="controlBtn">13 игроков</button>
-            <button id="controlBtn14" class="controlBtn">14 игроков</button>
-            <button id="controlBtn15" class="controlBtn">15 игроков</button>
+        <div id="mafiaControlPanel" class="idMafiaControlPanel idMafiaControlPanelMore">
+          <div id="mCPBlock">
+            <div id="controlPanel">
+              <div id="btnPlayers">
+                <h2>Панель управления</h2>
+                <button id="controlBtn09" class="controlBtn">9 игроков</button>
+                <button id="controlBtn10" class="controlBtn">10 игроков</button>
+                <button id="controlBtn11" class="controlBtn">11 игроков</button>
+                <button id="controlBtn12" class="controlBtn">12 игроков</button>
+                <button id="controlBtn13" class="controlBtn">13 игроков</button>
+                <button id="controlBtn14" class="controlBtn">14 игроков</button>
+                <button id="controlBtn15" class="controlBtn">15 игроков</button>
+                <input id='controlBtnClose'type="button" value="❌" class="controlBtnClose">
+              </div>
+              <div id="btnFalls">
+              </div>
+              <div id="controlPanelResult">
+              </div>
+              <div id="globalPanelControls">
+                
+              </div>
+            </div>
+              <div id="clearBtnVote">
+              </div>
           </div>
-          <div id="btnFalls">
-          </div>
-          <br>
-          <div id="controlPanelResult">
-          </div>
-          <div id="globalPanelControls">
-            
+          <div id="mCPButton">
+            <input type="button" value="►" id="mCPButtonHide">
           </div>
         </div>
-          <div id="clearBtnVote">
+        <div id="mafiaCloseRandomGlobal" class="idMafiaCloseRandomGlobal offRoleGlobal">
+          <button id="mafiaBtnClose" class="idMafiaBtnClose">Рандомайзер</button>
+          <div id="mafiaInfo" class="idMafiaInfo">
+            <textarea id="textAriaMafia" class="idTextAriaMafia" ></textarea>
           </div>
-        </div>
-        <div id="mafiaCloseRandomGlobal">
-          <button id="mafiaBtnClose">Рандомайзер</button>
-          <div id="mafiaInfo">
-            <textarea id="textAriaMafia"></textarea>
-          </div>
-          <div id="mafiaCloseRandom">
-            <div id="mafiaRole" class="offRole">
-                <h2>Раздача ролей на мафию</h2>
+          <div id="mafiaCloseRandom" class="idMafiaCloseRandom">
+            <div id="mafiaRole" class="idMafiaRole offRole">
+                <h2>Роли</h2>
                 <button id="mafiaBtn09" class="mafiaBtn">9 игроков</button>
                 <button id="mafiaBtn10" class="mafiaBtn">10 игроков</button>
                 <button id="mafiaBtn11" class="mafiaBtn">11 игроков</button>
@@ -81,12 +85,12 @@
                 <button id="mafiaBtn14" class="mafiaBtn">14 игроков</button>
                 <button id="mafiaBtn15" class="mafiaBtn">15 игроков</button>
                 <br>
-                <div id="mafiaRoleResult">
+                <div id="mafiaRoleResult" class="idMafiaRoleResult">
                 </div>
           </div>
       
-            <div id="mafiaSlots" class="offRole">
-                <h2>Рандом слотов на мафию</h2>
+            <div id="mafiaSlots" class="offRole idMafiaSlots">
+                <h2>Слоты</h2>
                 <button id="slotBtn09" class="slotBtn">9 игроков</button>
                 <button id="slotBtn10" class="slotBtn">10 игроков</button>
                 <button id="slotBtn11" class="slotBtn">11 игроков</button>
@@ -95,7 +99,7 @@
                 <button id="slotBtn14" class="slotBtn">14 игроков</button>
                 <button id="slotBtn15" class="slotBtn">15 игроков</button>
                 <br>
-                <div id="slotRoleResult">
+                <div id="slotRoleResult" class="idSlotRoleResult">
                 </div>
           </div>
           </div>
