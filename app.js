@@ -552,11 +552,48 @@ const textAriaMafia = document.querySelector('#textAriaMafia')
 const mafiaRole = document.querySelector('#mafiaRole')
 const mafiaSlots = document.querySelector('#mafiaSlots')
 const mafiaInfo = document.querySelector('#mafiaInfo')
+const mCPButtonHide = document.querySelector('#mCPButtonHide')
+const mafiaCloseRandomGlobal = document.querySelector('#mafiaCloseRandomGlobal')
+const MafiaControlPanel = document.querySelector('#mafiaControlPanel')
+const controlBtnClose = document.querySelector('#controlBtnClose')
+
+
+controlBtnClose.onclick = () => {
+  
+  if (controlBtnClose.value === `❌`){
+    controlBtnClose.value = `✅`
+  }
+  else if (controlBtnClose.value === `✅`) {
+    controlBtnClose.value = `❌`
+  }
+  document.querySelector('#controlBtnClose').classList.toggle('cBC')
+  document.querySelector('#controlBtn09').classList.toggle('cBCS')
+  document.querySelector('#controlBtn10').classList.toggle('cBCS')
+  document.querySelector('#controlBtn11').classList.toggle('cBCS')
+  document.querySelector('#controlBtn12').classList.toggle('cBCS')
+  document.querySelector('#controlBtn13').classList.toggle('cBCS')
+  document.querySelector('#controlBtn14').classList.toggle('cBCS')
+  document.querySelector('#controlBtn15').classList.toggle('cBCS')
+  document.querySelector('#fallBtn04').classList.toggle('cBCS')
+  document.querySelector('#fallBtn05').classList.toggle('cBCS')
+}
+
 mafiaBtnClose.onclick = () => {
   mafiaRole.classList.toggle('offRole')
   textAriaMafia.classList.toggle('offRole')
   mafiaSlots.classList.toggle('offRole')
   mafiaInfo.classList.toggle('offRole')
+}
+mCPButtonHide.onclick = () => {
+  mafiaCloseRandomGlobal.classList.toggle('offRoleGlobal')
+  MafiaControlPanel.classList.toggle('idMafiaControlPanelMore')
+  if (mCPButtonHide.value === `►`){
+    mCPButtonHide.value = `◀`
+  }
+  else if (mCPButtonHide.value === `◀`) {
+    mCPButtonHide.value = `►`
+  }
+
 }
 ////////////////
 // CONTROL PANEL MAFIA
@@ -574,7 +611,21 @@ const btnFalls = document.querySelector('#btnFalls')
 
 
 // 9 ИГРОКОВ
+
 controlBtn09.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 На столе: 
+1 Мафия🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -615,10 +666,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -639,10 +690,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -663,10 +714,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -687,10 +738,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -711,10 +762,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -735,10 +786,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -759,10 +810,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -783,10 +834,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -807,10 +858,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -831,6 +882,22 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+1 Мафия🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -933,10 +1000,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -957,10 +1024,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -981,10 +1048,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1005,10 +1072,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1029,10 +1096,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1053,10 +1120,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1077,10 +1144,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1101,10 +1168,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1125,10 +1192,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1297,6 +1364,22 @@ document.querySelector('#player9Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+1 Мафия🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -1408,10 +1491,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -1432,10 +1515,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1456,10 +1539,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1480,10 +1563,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1504,10 +1587,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1528,10 +1611,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1552,10 +1635,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1576,10 +1659,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1600,10 +1683,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1801,6 +1884,19 @@ document.querySelector('#player9Plus30').onclick = () => {
 
 // 10 игроков
 controlBtn10.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -1843,10 +1939,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -1867,10 +1963,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1891,10 +1987,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1915,10 +2011,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1939,10 +2035,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1963,10 +2059,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -1987,10 +2083,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2011,10 +2107,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2035,10 +2131,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2059,10 +2155,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2084,6 +2180,22 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -2195,10 +2307,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -2219,10 +2331,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2243,10 +2355,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2267,10 +2379,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2291,10 +2403,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2315,10 +2427,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2339,10 +2451,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2363,10 +2475,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2387,10 +2499,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2411,10 +2523,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2601,6 +2713,22 @@ document.querySelector('#player10Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -2722,10 +2850,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -2746,10 +2874,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2770,10 +2898,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2794,10 +2922,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2818,10 +2946,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2842,10 +2970,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2866,10 +2994,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2890,10 +3018,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2914,10 +3042,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -2938,13 +3066,14 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
+
 
 document.querySelector('#clearVoteMafia').onclick = () => {
   // Run
@@ -3158,6 +3287,22 @@ document.querySelector('#player10Plus30').onclick = () => {
 // 11 Игроков
 
 controlBtn11.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 Несострелы можно
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -3201,10 +3346,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -3225,10 +3370,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3249,10 +3394,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3273,10 +3418,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3297,10 +3442,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3321,10 +3466,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3345,10 +3490,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3369,10 +3514,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3393,10 +3538,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3417,10 +3562,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3441,10 +3586,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3467,6 +3612,24 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 Несострелы можно
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -3587,10 +3750,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -3611,10 +3774,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3635,10 +3798,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3659,10 +3822,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3683,10 +3846,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3707,10 +3870,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3731,10 +3894,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3755,10 +3918,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3779,10 +3942,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3803,10 +3966,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -3827,10 +3990,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4034,6 +4197,24 @@ document.querySelector('#player11Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 Несострелы можно
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+2 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -4165,10 +4346,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -4189,10 +4370,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4213,10 +4394,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4237,10 +4418,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4261,10 +4442,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4285,10 +4466,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4309,10 +4490,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4333,10 +4514,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4357,10 +4538,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4381,10 +4562,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4405,10 +4586,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4645,6 +4826,23 @@ document.querySelector('#player11Plus30').onclick = () => {
 // 12 игроков
 
 controlBtn12.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 Несострелы можно
+=================
+🤍 На столе: 
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -4690,10 +4888,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -4714,10 +4912,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4738,10 +4936,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4762,10 +4960,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4786,10 +4984,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4810,10 +5008,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4834,10 +5032,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4858,10 +5056,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4882,10 +5080,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4906,10 +5104,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4930,10 +5128,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4954,10 +5152,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -4981,16 +5179,35 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 Несострелы можно
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
-  mafiaPlayer1.innerHTML = `<span>1</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer2.innerHTML = `<span>2</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer3.innerHTML = `<span>3</span><input type="button" id="pushVoting3" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer4.innerHTML = `<span>4</span><input type="button" id="pushVoting4" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer5.innerHTML = `<span>5</span><input type="button" id="pushVoting5" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer6.innerHTML = `<span>6</span><input type="button" id="pushVoting6" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer7.innerHTML = `<span>7</span><input type="button" id="pushVoting7" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer8.innerHTML = `<span>8</span><input type="button" id="pushVoting8" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
-  mafiaPlayer9.innerHTML = `<span>9</span><input type="button" id="pushVoting9" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer3.innerHTML = `<span>03</span><input type="button" id="pushVoting3" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer4.innerHTML = `<span>04</span><input type="button" id="pushVoting4" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer5.innerHTML = `<span>05</span><input type="button" id="pushVoting5" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer6.innerHTML = `<span>06</span><input type="button" id="pushVoting6" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer7.innerHTML = `<span>07</span><input type="button" id="pushVoting7" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer8.innerHTML = `<span>08</span><input type="button" id="pushVoting8" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
+  mafiaPlayer9.innerHTML = `<span>09</span><input type="button" id="pushVoting9" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer10.innerHTML = `<span>10</span><input type="button" id="pushVoting10" class = "voteBtn10 mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer11.innerHTML = `<span>11</span><input type="button" id="pushVoting11" class = "voteBtn10 mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer12.innerHTML = `<span>12</span><input type="button" id="pushVoting12" class = "voteBtn10 mafiaVotingBtn" value = "Выставить">`
@@ -5110,10 +5327,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -5134,10 +5351,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5158,10 +5375,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5182,10 +5399,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5206,10 +5423,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5230,10 +5447,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5254,10 +5471,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5278,10 +5495,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5302,10 +5519,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5326,10 +5543,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5350,10 +5567,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5374,10 +5591,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5597,6 +5814,25 @@ document.querySelector('#player12Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 Несострелы можно
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -5738,10 +5974,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -5762,10 +5998,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5786,10 +6022,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5810,10 +6046,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5834,10 +6070,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5858,10 +6094,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5882,10 +6118,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5906,10 +6142,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5930,10 +6166,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5954,10 +6190,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -5978,10 +6214,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6002,10 +6238,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6260,6 +6496,24 @@ document.querySelector('#player12Plus30').onclick = () => {
 
 // 13 игроков
 controlBtn13.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 Несострелы можно
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -6305,10 +6559,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -6329,10 +6583,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6353,10 +6607,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6377,10 +6631,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6401,10 +6655,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6425,10 +6679,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6449,10 +6703,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6473,10 +6727,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6497,10 +6751,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6521,10 +6775,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6545,10 +6799,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6569,10 +6823,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6593,10 +6847,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6621,6 +6875,26 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 Несострелы можно
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -6759,10 +7033,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -6783,10 +7057,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6807,10 +7081,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6831,10 +7105,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6855,10 +7129,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6879,10 +7153,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6903,10 +7177,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6927,10 +7201,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6951,10 +7225,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6975,10 +7249,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -6999,10 +7273,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7023,10 +7297,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7047,10 +7321,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7287,6 +7561,26 @@ document.querySelector('#player13Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 Несострелы можно
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -7438,10 +7732,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -7462,10 +7756,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7486,10 +7780,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7510,10 +7804,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7534,10 +7828,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7558,10 +7852,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7582,10 +7876,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7606,10 +7900,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7630,10 +7924,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7654,10 +7948,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7678,10 +7972,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7702,10 +7996,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -7726,10 +8020,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8004,6 +8298,24 @@ document.querySelector('#player13Plus30').onclick = () => {
 
 // 14 игроков
 controlBtn14.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 Несострелы можно
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -8050,10 +8362,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -8074,10 +8386,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8098,10 +8410,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8122,10 +8434,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8146,10 +8458,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8170,10 +8482,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8194,10 +8506,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8218,10 +8530,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8242,10 +8554,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8266,10 +8578,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8290,10 +8602,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8314,10 +8626,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8338,10 +8650,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8362,10 +8674,10 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8391,6 +8703,26 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 Несострелы можно
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -8538,10 +8870,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -8562,10 +8894,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8586,10 +8918,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8610,10 +8942,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8634,10 +8966,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8658,10 +8990,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8682,10 +9014,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8706,10 +9038,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8730,10 +9062,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8754,10 +9086,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8778,10 +9110,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8802,10 +9134,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8826,10 +9158,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -8850,10 +9182,10 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9107,6 +9439,26 @@ document.querySelector('#player14Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 Несострелы можно
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+3 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -9268,10 +9620,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -9292,10 +9644,10 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9316,10 +9668,10 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9340,10 +9692,10 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9364,10 +9716,10 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9388,10 +9740,10 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9412,10 +9764,10 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9436,10 +9788,10 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9460,10 +9812,10 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9484,10 +9836,10 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9508,10 +9860,10 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9532,10 +9884,10 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9556,10 +9908,10 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9580,10 +9932,10 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-if (localArrVote.length > 7) {
+if (localArrVote.length > 4) {
   document.querySelector('#resultVoteMafia').style.fontSize = '35px'
 }
-else if (localArrVote.length <= 7){
+else if (localArrVote.length <= 4){
   document.querySelector('#resultVoteMafia').style.fontSize = '50px'
 }
 }
@@ -9878,6 +10230,25 @@ document.querySelector('#player14Plus30').onclick = () => {
 
 // 15 игроков
 controlBtn15.onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+=================
+🤍 Несострелы можно
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+4 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+1 Доп.Роль❓
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   btnFalls.innerHTML = 
   `
@@ -9925,11 +10296,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -9950,13 +10320,12 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting3').onclick = () => {
@@ -9975,13 +10344,12 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting4').onclick = () => {
@@ -10000,13 +10368,12 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting5').onclick = () => {
@@ -10025,13 +10392,12 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting6').onclick = () => {
@@ -10050,13 +10416,12 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting7').onclick = () => {
@@ -10075,13 +10440,12 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting8').onclick = () => {
@@ -10100,13 +10464,12 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting9').onclick = () => {
@@ -10125,13 +10488,12 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting10').onclick = () => {
@@ -10150,13 +10512,12 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting11').onclick = () => {
@@ -10175,13 +10536,12 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting12').onclick = () => {
@@ -10200,13 +10560,12 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting13').onclick = () => {
@@ -10225,13 +10584,12 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting14').onclick = () => {
@@ -10250,13 +10608,12 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting15').onclick = () => {
@@ -10276,10 +10633,10 @@ document.querySelector('#pushVoting15').onclick = () => {
 }
 
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -10306,6 +10663,27 @@ document.querySelector('#clearVoteMafia').onclick = () => {
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 4 фолл
+=================
+🤍 Несострелы можно
+🤍 3 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+4 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+1 Доп.Роль❓
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -10462,11 +10840,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -10487,13 +10864,12 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting3').onclick = () => {
@@ -10512,13 +10888,12 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting4').onclick = () => {
@@ -10537,13 +10912,12 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting5').onclick = () => {
@@ -10562,13 +10936,12 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting6').onclick = () => {
@@ -10587,13 +10960,12 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting7').onclick = () => {
@@ -10612,13 +10984,12 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting8').onclick = () => {
@@ -10637,13 +11008,12 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting9').onclick = () => {
@@ -10662,13 +11032,12 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting10').onclick = () => {
@@ -10687,13 +11056,12 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting11').onclick = () => {
@@ -10712,13 +11080,12 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting12').onclick = () => {
@@ -10737,13 +11104,12 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting13').onclick = () => {
@@ -10762,13 +11128,12 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting14').onclick = () => {
@@ -10787,13 +11152,12 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting15').onclick = () => {
@@ -10813,10 +11177,10 @@ document.querySelector('#pushVoting15').onclick = () => {
 }
 
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -11087,6 +11451,27 @@ document.querySelector('#player15Plus30').onclick = () => {
 
 
 document.querySelector('#fallBtn05').onclick = () => {
+  document.querySelector("#textAriaMafia").innerHTML = 
+  `Подъем со стола за:
+🤍 Метаинфу 
+🤍 Оскорбление Ведущего/Игроков
+🤍 Спор с ведущим
+🤍 5 фолл
+=================
+🤍 Несострелы можно
+🤍 4 фолл - мут
+=================
+🤍 На столе: 
+1 Маньяк🔪
+1 Любовница💖
+4 Мафии🔫
+1 Дон🕵🏻
+1 Комиссар👮‍♂️
+1 Доктор💉
+1 Доп.Роль❓
+=================
+ЕСЛИ ВАМ НЕ ПРИСЛАЛИ РОЛЬ - ВЫ МИРНЫЙ ЖИТЕЛЬ!
+  `
   // Run
   mafiaPlayer1.innerHTML = `<span>01</span><input type="button" id="pushVoting1" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
   mafiaPlayer2.innerHTML = `<span>02</span><input type="button" id="pushVoting2" class = "voteBtn mafiaVotingBtn" value = "Выставить">`
@@ -11258,11 +11643,10 @@ document.querySelector('#pushVoting1').onclick = () => {
     document.querySelector('#pushVoting1').value = 'Выставить'
   }
 
-
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
@@ -11283,13 +11667,12 @@ document.querySelector('#pushVoting2').onclick = () => {
     document.querySelector('#pushVoting2').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting3').onclick = () => {
@@ -11308,13 +11691,12 @@ document.querySelector('#pushVoting3').onclick = () => {
     document.querySelector('#pushVoting3').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting4').onclick = () => {
@@ -11333,13 +11715,12 @@ document.querySelector('#pushVoting4').onclick = () => {
     document.querySelector('#pushVoting4').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting5').onclick = () => {
@@ -11358,13 +11739,12 @@ document.querySelector('#pushVoting5').onclick = () => {
     document.querySelector('#pushVoting5').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting6').onclick = () => {
@@ -11383,13 +11763,12 @@ document.querySelector('#pushVoting6').onclick = () => {
     document.querySelector('#pushVoting6').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting7').onclick = () => {
@@ -11408,13 +11787,12 @@ document.querySelector('#pushVoting7').onclick = () => {
     document.querySelector('#pushVoting7').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting8').onclick = () => {
@@ -11433,13 +11811,12 @@ document.querySelector('#pushVoting8').onclick = () => {
     document.querySelector('#pushVoting8').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting9').onclick = () => {
@@ -11458,13 +11835,12 @@ document.querySelector('#pushVoting9').onclick = () => {
     document.querySelector('#pushVoting9').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting10').onclick = () => {
@@ -11483,13 +11859,12 @@ document.querySelector('#pushVoting10').onclick = () => {
     document.querySelector('#pushVoting10').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting11').onclick = () => {
@@ -11508,13 +11883,12 @@ document.querySelector('#pushVoting11').onclick = () => {
     document.querySelector('#pushVoting11').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting12').onclick = () => {
@@ -11533,13 +11907,12 @@ document.querySelector('#pushVoting12').onclick = () => {
     document.querySelector('#pushVoting12').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting13').onclick = () => {
@@ -11558,13 +11931,12 @@ document.querySelector('#pushVoting13').onclick = () => {
     document.querySelector('#pushVoting13').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting14').onclick = () => {
@@ -11583,13 +11955,12 @@ document.querySelector('#pushVoting14').onclick = () => {
     document.querySelector('#pushVoting14').value = 'Выставить'
 }
 
-
-  if (localArrVote.length > 7) {
-    document.querySelector('#resultVoteMafia').style.fontSize = '35px'
-  }
-  else if (localArrVote.length <= 7){
-    document.querySelector('#resultVoteMafia').style.fontSize = '50px'
-  }
+if (localArrVote.length > 4) {
+  document.querySelector('#resultVoteMafia').style.fontSize = '35px'
+}
+else if (localArrVote.length <= 4){
+  document.querySelector('#resultVoteMafia').style.fontSize = '50px'
+}
 }
 
 document.querySelector('#pushVoting15').onclick = () => {
@@ -11609,10 +11980,10 @@ document.querySelector('#pushVoting15').onclick = () => {
 }
 
 
-  if (localArrVote.length > 7) {
+  if (localArrVote.length > 4) {
     document.querySelector('#resultVoteMafia').style.fontSize = '35px'
   }
-  else if (localArrVote.length <= 7){
+  else if (localArrVote.length <= 4){
     document.querySelector('#resultVoteMafia').style.fontSize = '50px'
   }
 }
