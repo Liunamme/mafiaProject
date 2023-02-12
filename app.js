@@ -879,6 +879,16 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting9").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -1214,6 +1224,16 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
 }
 document.querySelector('#player1Fall1').onclick = () => {
   document.querySelector('#player1Fall1').classList.toggle('mafiaRedBtn')
@@ -1705,6 +1725,16 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -2177,6 +2207,18 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting10").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -2546,6 +2588,17 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -3090,6 +3143,17 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -3609,6 +3673,18 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting11").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -4014,6 +4090,18 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -4610,6 +4698,18 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
 
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -5176,6 +5276,19 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting12").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -5615,6 +5728,19 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting12").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -6262,6 +6388,19 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting12").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -6872,6 +7011,20 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting13").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -7346,6 +7499,20 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting13").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -8045,6 +8212,20 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting13").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -8700,6 +8881,21 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting14").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -9208,6 +9404,21 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting14").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -9958,6 +10169,21 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting14").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -10660,6 +10886,22 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting15").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting15').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#fallBtn04').onclick = () => {
@@ -11204,6 +11446,22 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting15").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting15').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
@@ -12007,6 +12265,22 @@ document.querySelector('#clearVoteMafia').onclick = () => {
   document.querySelector("#pushVoting15").value = 'Выставить'
   localArrVote = []
   document.querySelector('#resultVoteMafia').innerHTML = `<span></span>` + localArrVote.join(" ")
+
+  document.querySelector('#pushVoting1').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting2').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting3').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting4').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting5').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting6').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting7').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting8').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting9').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting10').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting11').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting12').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting13').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting14').classList.remove('mafiaVotingBtnOff')
+  document.querySelector('#pushVoting15').classList.remove('mafiaVotingBtnOff')
 }
 
 document.querySelector('#player1Fall1').onclick = () => {
