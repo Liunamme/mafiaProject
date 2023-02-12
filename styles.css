@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, rgba(234,204,255,1) 0%, rgba(255,160,160,1) 50%, rgba(255,231,196,1) 100%);
+  background: linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(39, 39, 39) 50%, rgb(51, 51, 51) 100%);
 }
 
 #mafia {
@@ -28,12 +28,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-bottom: 0px;
   border-radius: 20px 20px 0px 0px;
   margin-top: 10px;
   background-color: rgba(85, 85, 85, 0.5);
   color: white;
+  box-shadow: 0px 0px 10px 0px white;
 }
 
 #sekundomer {
@@ -50,7 +51,7 @@ width: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-left: 2px solid black;
+  border-left: 2px solid white;
 }
 
 #vRM {
@@ -82,8 +83,15 @@ font-family: 'Montserrat Alternates', sans-serif;
   height: 25px;
   border: 1px solid black;
   margin-bottom: 5px;
-  font-size: 17px;
+  font-size: 14px;
   border-radius: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+}
+
+.controlBtn:hover{
+  box-shadow: 0px 0px 20px 0px white;
+  transform: scale(1.1);
 }
 
 .controlBtnClose {
@@ -96,6 +104,13 @@ font-family: 'Montserrat Alternates', sans-serif;
   border: 1px solid black;
   font-size: 17px;
   border-radius: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+}
+
+.fallBtn:hover{
+  box-shadow: 0px 0px 20px 0px white;
+  transform: scale(1.1);
 }
 
 #clearBtnVote {
@@ -161,8 +176,12 @@ font-family: 'Montserrat Alternates', sans-serif;
 .secBtns img{
   width: 32px;
   height: 32px;
-  border: 2px solid black;
   border-radius: 20px;
+}
+
+.secBtns img:hover{
+  box-shadow: 0px 0px 20px 0px white;
+  transform: scale(1.3);
 }
 
 #mafiaControlPanelGlobal {
@@ -182,30 +201,55 @@ font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .mafiaGreenBtn {
-  background: green;
+  background: rgb(20,174,92);
   color: white;
   border: 2px solid black;
 }
+
+.mafiaGreenBtn:hover {
+  box-shadow: 0px 0px 20px 0px rgb(77, 218, 143);
+  transform: scale(1.2);
+}
+
+.mafiaRedBtn:hover {
+  box-shadow: 0px 0px 20px 0px rgb(255, 116, 85);
+  transform: scale(1.2);
+}
+
+
 .mafiaRedBtn {
-  background: Red;
+  background: rgb(242,72,34);
   color: white;
   border: 2px solid black;
 }
-/* .mafiaVotingBtn {
-  background-color:rgb(36, 36, 36);
+
+.mafiaVotingBtn {
+  background-color:rgb(15, 112, 60);
   color: white;
 }
 .mafiaVotingBtnOff {
-  background-color:rgb(160, 160, 160);
-  color: rgb(0, 0, 0);
-} */
+  background-color:rgb(161, 50, 25);
+  color: white;
+}
+
+.mafiaVotingBtn:hover{
+  box-shadow: 0px 0px 20px 0px rgb(77, 218, 143);
+  transform: scale(1.1);
+}
+.mafiaVotingBtnOff:hover {
+  box-shadow: 0px 0px 20px 0px rgb(255, 116, 85);
+  transform: scale(1.1);
+}
 
 .voteBtn,
 .voteBtn10 {
   width: 120px;
   height: 35px;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+
 }
 
 #controlPanelResult input {
@@ -226,9 +270,10 @@ font-family: 'Montserrat Alternates', sans-serif;
   justify-content: space-between;
   height: 100%;
   width: 60%;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 0px 0px 20px 20px;
   background-color: rgba(85, 85, 85, 0.4);
+  box-shadow: 0px 0px 10px 0px white;
 }
 
 .idMafiaControlPanelMore {
@@ -237,7 +282,7 @@ font-family: 'Montserrat Alternates', sans-serif;
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 0px 0px 20px 20px;
   background-color: rgba(85, 85, 85, 0.4);
 }
@@ -264,10 +309,16 @@ font-family: 'Montserrat Alternates', sans-serif;
   width: 100%;
   border-radius: 0px 0px 20px 0px;
   border: 0;
-  border-left: 2px solid black;
+  border-left: 2px solid white;
   font-size: 20px;
   padding: 0;
   background-color: rgba(138, 138, 138, 0.4);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+#mCPButtonHide:hover {
+  box-shadow: 0px 0px 20px 0px white;
 }
 
 
@@ -277,7 +328,8 @@ font-family: 'Montserrat Alternates', sans-serif;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  border: 2px black solid;
+  border: 2px solid white;
+  box-shadow: 0px 0px 10px 0px white;
 }
 
 .idMafiaBtnClose {
@@ -290,7 +342,12 @@ font-family: 'Montserrat Alternates', sans-serif;
   color: white;
   text-shadow: 2px 2px 2px black;
   font-family: 'Montserrat Alternates', sans-serif;
+  border-bottom: 2px solid white;
 
+}
+
+.idMafiaBtnClose:hover {
+  box-shadow: 0px 0px 20px 0px white;
 }
 
 .idMafiaCloseRandom {
@@ -308,7 +365,7 @@ font-family: 'Montserrat Alternates', sans-serif;
   max-height: 100%;
   z-index: 2;
   border-radius: 0px 0px 0px 20px;
-  border-right: 2px solid black;
+  border-right: 2px solid white;
   text-align: center;
   background-color: rgba(85, 85, 85, 0.4);
 }
@@ -343,11 +400,11 @@ font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .offRole {
-  display: none;
+  display: none !important;
 }
 
 .offRoleGlobal {
-  display: none;
+  display: none !important;
 }
 
 .idMafiaSlots {
@@ -494,6 +551,8 @@ max-width: 300px;
   font-size: 25px;
   border-radius: 5px;
   text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
 }
 
 #player1Plus30,
@@ -517,6 +576,8 @@ max-width: 300px;
   font-size: 25px;
   border-radius: 5px;
   text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
 }
 
 #mafiaPlayer1,
@@ -558,6 +619,7 @@ max-width: 300px;
   font-size: 25px;
   width: 30px;
   font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
 }
 
 
@@ -566,11 +628,16 @@ max-width: 300px;
   height: 30px;
   border-radius: 0px 0px 0px 20px;
   border: 0;
-  border-top: 2px solid black;
+  border-top: 2px solid white;
   background-color: rgba(138, 138, 138, 0.4);
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   text-shadow: 2px 2px 2px black;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#clearVoteMafia:hover {
+  box-shadow: 0px 0px 20px 0px white;
 }
 
 .mafiaBtn,
@@ -578,8 +645,14 @@ max-width: 300px;
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
+
+.mafiaBtn:hover,
+.slotBtn:hover {
+  box-shadow: 0px 0px 20px 0px white;
+}
+
 
 
 @media (max-width: 1300px) {
@@ -748,7 +821,7 @@ max-width: 300px;
 .voteBtn10 {
   width: 120px;
   height: 30px;
-  font-size: 20px;
+  font-size: 14px;
   border-radius: 5px;
 }
 
@@ -758,11 +831,11 @@ max-width: 300px;
 }
 
 #mafiaRole {
-  height: 710px;
+  height: 707px;
 }
 
 #mafiaSlots {
-  height: 710px;
+  height: 707px;
 }
 
 }
@@ -797,7 +870,6 @@ max-width: 300px;
 
   #mCPButtonHide {
     font-size: 10px;
-
   }
 
   .idTextAriaMafia{
@@ -972,6 +1044,7 @@ max-width: 300px;
     width: 80px;
     height: 25px;
     border: 1px solid black;
+    font-size: 15px;
   }
 
 
@@ -979,7 +1052,7 @@ max-width: 300px;
 .voteBtn10 {
   width: 100px;
   height: 30px;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 5px;
 }
 
