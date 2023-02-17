@@ -2899,11 +2899,15 @@ textAriaMafia.innerHTML =
 ///
 
 // Секундомер
-var timer = 0;
-var timerInterval;
-var ms = document.getElementById('ms');
-var second = document.getElementById('second');
-var minute = document.getElementById('minute');
+let timer = 0;
+let timerInterval;
+let ms = document.getElementById('ms');
+let second = document.getElementById('second');
+let minute = document.getElementById('minute');
+
+const puskSec = document.querySelector('#vpered')
+const stopSec = document.querySelector('.sanovka')
+const resetSec = document.querySelector('#reset')
 
 
 function vpered() {
@@ -2933,6 +2937,28 @@ function sanovka() {
   clearInterval(timerInterval);
 }
 //
+
+puskSec.onclick = () => {
+  if (puskSec.classList.contains('vpered')) {
+    vpered()
+    puskSec.classList.remove('vpered')
+    puskSec.classList.add('sanovka')
+    puskSec.querySelector('img').setAttribute('src', './img/timerBtns/pause.png');
+  }
+  else if (puskSec.classList.contains('sanovka')) {
+    sanovka()
+    puskSec.classList.remove('sanovka')
+    puskSec.classList.add('vpered')
+    puskSec.querySelector('img').setAttribute('src', './img/timerBtns/play.png');
+  }
+
+}
+
+resetSec.onclick = () => {
+  ClearСlock()
+}
+
+
 
 // Ширина mafiaUpBlockGlobal = ширине mafiaControlPanel
 setInterval(function () {
