@@ -47,6 +47,8 @@ mafiaRoleResult.innerHTML =
 <br>
 9) ${resultRoleRole[8]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
 mafiaBtn10.onclick = () => {
@@ -78,6 +80,8 @@ mafiaRoleResult.innerHTML =
 <br>
 10) ${resultRoleRole[9]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
 mafiaBtn11.onclick = () => {
@@ -111,6 +115,8 @@ mafiaRoleResult.innerHTML =
 <br>
 11) ${resultRoleRole[10]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
 mafiaBtn12.onclick = () => {
@@ -146,6 +152,8 @@ mafiaRoleResult.innerHTML =
 <br>
 12) ${resultRoleRole[11]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
 mafiaBtn13.onclick = () => {
@@ -183,6 +191,8 @@ mafiaRoleResult.innerHTML =
 <br>
 13) ${resultRoleRole[12]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
 mafiaBtn14.onclick = () => {
@@ -222,15 +232,22 @@ mafiaRoleResult.innerHTML =
 <br>
 14) ${resultRoleRole[13]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 
+
+
+
 mafiaBtn15.onclick = () => {
+
   randomRoleMassive = []
   randomRoleMassive = ['Мафия🔫','Мирный житель🙍‍♂️','Мафия🔫','Мирный житель🙍‍♂️','Комиссар🤠','Мирный житель🙍‍♂️','Дон🕵🏻','Мирный житель🙍‍♂️','Доктор💉','Мафия🔫','Мирный житель🙍‍♂️','Любовница💖','Маньяк🔪','Мафия🔫','Сержант👮‍']
 // Run
 for (let i = 0; i < 30; i++) {
   shuffle(randomRoleMassive);
 }
+
 mafiaRoleResult.innerHTML = 
 `
 1) ${resultRoleRole[0]}
@@ -263,6 +280,8 @@ mafiaRoleResult.innerHTML =
 <br>
 15) ${resultRoleRole[14]}
 `
+let localStrg = mafiaRoleResult.innerHTML
+localStorage.setItem('roleMafiaProject', localStrg)
 }
 //
 
@@ -314,6 +333,8 @@ slotRoleResult.innerHTML =
 <br>
 9) ${resultSlotRole[8]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn10.onclick = () => {
@@ -345,6 +366,8 @@ slotRoleResult.innerHTML =
 <br>
 10) ${resultSlotRole[9]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn11.onclick = () => {
@@ -378,6 +401,8 @@ slotRoleResult.innerHTML =
 <br>
 11) ${resultSlotRole[10]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn12.onclick = () => {
@@ -413,6 +438,8 @@ slotRoleResult.innerHTML =
 <br>
 12) ${resultSlotRole[11]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn13.onclick = () => {
@@ -450,6 +477,8 @@ slotRoleResult.innerHTML =
 <br>
 13) ${resultSlotRole[12]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn14.onclick = () => {
@@ -489,6 +518,8 @@ slotRoleResult.innerHTML =
 <br>
 14) ${resultSlotRole[13]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
 
 slotBtn15.onclick = () => {
@@ -530,7 +561,15 @@ slotRoleResult.innerHTML =
 <br>
 15) ${resultSlotRole[14]}
 `
+let localStrg = slotRoleResult.innerHTML
+localStorage.setItem('slotsMafiaProject', localStrg)
 }
+
+function storage() {
+  mafiaRoleResult.innerHTML = localStorage.getItem('roleMafiaProject')
+  slotRoleResult.innerHTML = localStorage.getItem('slotsMafiaProject')
+}
+setTimeout(storage, 1);
 //
 ///
 
